@@ -9,11 +9,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
+import { StartComponent } from './pages/start/start.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PanelComponent,
+    StartComponent,
   ],
   imports: [
     BrowserModule,

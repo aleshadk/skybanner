@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl } from '@angular/forms';
+
 import { StateSettingsService } from './state-settings.service';
 
 @Component({
@@ -10,6 +11,7 @@ import { StateSettingsService } from './state-settings.service';
 export class PanelComponent implements OnInit {
   public controls: {[key: string]: FormControl}
 
+
   constructor(private state: StateSettingsService) {
     this.controls = state.form.controls as {[key: string]: FormControl};
   }
@@ -18,6 +20,6 @@ export class PanelComponent implements OnInit {
   }
 
   public submit(): void {
-    console.log(this.state.form.value);
+    this.state.refresh();
   }
 }
