@@ -1,0 +1,16 @@
+<a 
+    *ngIf="data"
+    [href]="data.creative_data.click_url"
+    target="_blank"
+    class="root"
+    [style.width.px]="data.width"
+    [style.height.px]="data.height"
+>
+    <app-html-banner
+        *ngIf="data.creative_type === 'thirdparty'"
+        [data]="data"
+    ></app-html-banner>
+    <app-img-banner *ngIf="data.creative_type === 'image'" [data]="data">
+        
+    </app-img-banner>
+</a>

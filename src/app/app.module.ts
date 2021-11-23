@@ -10,12 +10,19 @@ import { MatCardModule } from '@angular/material/card';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { StartComponent } from './pages/start/start.component';
+import { HtmlBannerComponent } from './core/banners/html-banner/html-banner.component';
+import { BannerComponent } from './core/banners/banner/banner.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ImgBannerComponent } from './core/banners/img-banner/img-banner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PanelComponent,
     StartComponent,
+    HtmlBannerComponent,
+    BannerComponent,
+    ImgBannerComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,7 +31,8 @@ import { StartComponent } from './pages/start/start.component';
     ReactiveFormsModule,
     MatCardModule,
     MatSelectModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
