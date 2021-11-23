@@ -14,6 +14,9 @@ import { HtmlBannerComponent } from './core/banners/html-banner/html-banner.comp
 import { BannerComponent } from './core/banners/banner/banner.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ImgBannerComponent } from './core/banners/img-banner/img-banner.component';
+import { PollComponent } from './pages/poll/poll.component';
+import { OlympiadComponent } from './pages/olympiad/olympiad.component';
+import { CabinetComponent } from './pages/cabinet/cabinet.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,9 @@ import { ImgBannerComponent } from './core/banners/img-banner/img-banner.compone
     HtmlBannerComponent,
     BannerComponent,
     ImgBannerComponent,
+    PollComponent,
+    OlympiadComponent,
+    CabinetComponent,
   ],
   imports: [
     BrowserModule,

@@ -17,9 +17,20 @@ export class PanelComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.onPageSelected(this.controls.page.value);
+    this.controls.page.valueChanges.subscribe(value => this.onPageSelected(value));
   }
 
   public submit(): void {
     this.state.refresh();
+  }
+
+  public onPageSelected(value: string): void {
+    if (value === '/olympiad') {
+      this.controls.olympiadResult.enable();
+    } else {
+      this.controls.olympiadResult.disable();
+      this.controls.olympiadResult.setValue(null);
+    }
   }
 }

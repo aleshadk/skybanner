@@ -1,0 +1,18 @@
+<div class="result">
+    <div class="left">
+        <h3>{{result}}</h3>
+        <p>{{text}}</p>
+    </div>
+    <div class="right">
+        <div class="banner">
+            <div class="banner-wrap" *ngIf="creative === null">
+                <h3>Баннер невалидный, поэтому покажу что-то дефолтное</h3>
+            </div>
+
+            <div class="banner-wrap" *ngIf="creative" [style.background-color]="creative.background" [style.background-image]="'url(' + creative.imageUrl + ')'">
+                <h3>{{creative.text}}</h3>
+                <a [href]="creative.redirectUrl" target="_blank">{{creative.button}}</a>
+            </div>
+        </div>
+    </div>
+</div>

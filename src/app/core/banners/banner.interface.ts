@@ -26,7 +26,8 @@ export interface IAdglareAbstractCreative<TCreativeData extends IAdglareAbstract
     width: number;
     height: number;
     creative_type: 'thirdparty' | 'image';
-    creative_data: TCreativeData; 
+    creative_data: TCreativeData;
+    custom_fields?: {[key: string]: string};
 }
 
 export interface IAdglareHTMLCreative extends IAdglareAbstractCreative<IAdglareHTMLCreativeData> {
