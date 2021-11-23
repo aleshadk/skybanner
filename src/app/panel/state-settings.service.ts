@@ -16,6 +16,7 @@ export class StateSettingsService {
     class: new FormControl(),
     page: new FormControl(),
     olympiadResult: new FormControl(),
+    pollState: new FormControl()
   });
 
   constructor(private router: Router) {
@@ -29,6 +30,9 @@ export class StateSettingsService {
       })
     }
 
+    this.form.valueChanges.subscribe(() => {
+      localStorage.setItem('moh', JSON.stringify(this.form.value));
+    });
   }
 
   public refresh(): void {

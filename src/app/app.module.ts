@@ -9,6 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
 import { StartComponent } from './pages/start/start.component';
 import { HtmlBannerComponent } from './core/banners/html-banner/html-banner.component';
 import { BannerComponent } from './core/banners/banner/banner.component';
@@ -37,8 +38,9 @@ import { CabinetComponent } from './pages/cabinet/cabinet.component';
     ReactiveFormsModule,
     MatCardModule,
     MatSelectModule,
+    MatDialogModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

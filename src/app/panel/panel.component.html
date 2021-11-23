@@ -43,6 +43,14 @@
       </mat-select>
     </mat-form-field>
 
+    <mat-form-field class="form-control" appearance="fill">
+      <mat-label>Опрос пройден</mat-label>
+      <mat-select [formControl]="controls.pollState">
+        <mat-option value="0">Не пройден</mat-option>
+        <mat-option value="1">Пройден</mat-option>
+      </mat-select>
+    </mat-form-field>
+
     <button mat-button color="accent" (click)="submit()">Применить</button>
   </div>
 </mat-card>

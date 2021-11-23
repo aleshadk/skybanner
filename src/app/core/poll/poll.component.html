@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>{{data.title}}</h1>
+<div mat-dialog-content>
+  <p>{{data.text}}</p>
+</div>
+<div class="actions" mat-dialog-actions>
+  <button mat-button color="accent" (click)="close()">Закрыть</button>
+  <a mat-raised-button target="_blank" (click)="complete()" [href]="data.url">Пройти опрос</a>
+</div>

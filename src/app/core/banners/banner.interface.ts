@@ -23,6 +23,7 @@ export interface IAdglareImgCreativeData extends IAdglareAbstractCreativeData {
 
 
 export interface IAdglareAbstractCreative<TCreativeData extends IAdglareAbstractCreativeData> {
+    crID: string;
     width: number;
     height: number;
     creative_type: 'thirdparty' | 'image';

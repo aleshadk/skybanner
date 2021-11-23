@@ -32,5 +32,11 @@ export class PanelComponent implements OnInit {
       this.controls.olympiadResult.disable();
       this.controls.olympiadResult.setValue(null);
     }
+
+    if (value === '/poll') {
+      this.controls.pollState.enable();
+    } else {
+      this.controls.pollState.disable();
+    }
   }
 }
