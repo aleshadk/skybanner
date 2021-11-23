@@ -18,14 +18,15 @@ export class StateSettingsService {
     olympiadResult: new FormControl(),
   });
 
-  public data = new BehaviorSubject<UserData>({
-    class: undefined
-  });
-
   constructor(private router: Router) {
     const moh = localStorage.getItem('moh');
     if (moh) {
-      this.data.next(JSON.parse(moh));
+      const data = JSON.parse(moh);
+      Object.entries(data).forEach(z => {
+        if (this.form.controls[z[0]]) {
+          this.form.controls[z[0]].setValue(z[1]);
+        }
+      })
     }
 
   }

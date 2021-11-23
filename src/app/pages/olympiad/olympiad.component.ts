@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AdglareCreative } from 'src/app/core/banners/banner.interface';
+import { StateSettingsService } from 'src/app/panel/state-settings.service';
 import {AdglareService} from './../../core/banners/adglare.service'
 
 interface IOlympiadBanner {
@@ -17,19 +18,25 @@ interface IOlympiadBanner {
 })
 export class OlympiadComponent implements OnInit {
   private zoneId = '340701058';
-  public result = 100;
+  public result = 0;
   public text = 'Ого, довольно неплохо';
 
   // null если креатив невалидный, undefined если его ещё не загрузили
   public creative: IOlympiadBanner | null | undefined = undefined;
 
-  constructor(private adglare: AdglareService) { }
+  constructor(
+    private adglare: AdglareService,
+    private state: StateSettingsService
+  ) { }
 
   async ngOnInit() {
+    this.result = +this.state.form.controls.olympiadResult.value;
+
     this.text = this.result > 80
       ? `${this.result} из 100, ну просто один из лучших`
       : `Твой результат ${this.result} из 100`;
 
+    this.adglare.params.olympiadResult = this.result;
     const data = await this.adglare.getCreativeByPlacement(this.zoneId).toPromise();
     this.creative = this.parseCreative(data);
   }

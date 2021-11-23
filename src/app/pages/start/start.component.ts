@@ -11,8 +11,6 @@ export class StartComponent implements OnInit {
   public data = ''
 
   constructor(private state: StateSettingsService) {
-    this.class = this.state.data.value.class;
-    this.data = JSON.stringify(this.state.data.value);
   }
 
   ngOnInit(): void {
