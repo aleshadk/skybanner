@@ -4,7 +4,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { IAdglareHTMLCreative } from '../banner.interface';
 
 @Component({
-  selector: 'app-html-banner',
+  selector: 'app-html-rennab',
   templateUrl: './html-banner.component.html',
   styleUrls: ['./html-banner.component.scss']
 })

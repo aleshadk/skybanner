@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { IAdglareImgCreative } from '../banner.interface';
 
 @Component({
-  selector: 'app-img-banner',
+  selector: 'app-img-rennab',
   templateUrl: './img-banner.component.html',
   styleUrls: ['./img-banner.component.scss']
 })

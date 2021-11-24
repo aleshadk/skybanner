@@ -3,7 +3,7 @@ import { AdglareService } from '../adglare.service';
 import { AdglareCreative, IAdglareResponse } from '../banner.interface';
 
 @Component({
-  selector: 'app-banner',
+  selector: 'app-rennab',
   templateUrl: './banner.component.html',
   styleUrls: ['./banner.component.scss']
 })

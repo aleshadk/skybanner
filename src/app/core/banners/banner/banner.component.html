@@ -6,11 +6,11 @@
     [style.width.px]="data.width"
     [style.height.px]="data.height"
 >
-    <app-html-banner
+    <app-html-rennab
         *ngIf="data.creative_type === 'thirdparty'"
         [data]="data"
-    ></app-html-banner>
-    <app-img-banner *ngIf="data.creative_type === 'image'" [data]="data">
+    ></app-html-rennab>
+    <app-img-rennab *ngIf="data.creative_type === 'image'" [data]="data">
         
-    </app-img-banner>
+    </app-img-rennab>
 </a>
