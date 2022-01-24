@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build-for-deploy": "ng build --prod --base-href \"https://aleshadk.github.io/skybanner/\"",
-    "deploy": "ngh --dir=dist/banners"
+    "deploy": "ngh --dir=dist/banners",
+    "pages": "npm run build-for-deploy && npm run deploy"
   },
   "private": true,
   "dependencies": {

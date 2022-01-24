@@ -19,9 +19,4 @@ export class VideoBannerComponent implements OnInit, AfterViewInit {
     (this.video.nativeElement as any).play();
     (this.video.nativeElement as any).muted = true;
   }
-
-  moh(): void {
-    console.log('lala')
-  }
-
 }
