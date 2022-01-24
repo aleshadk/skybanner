@@ -21,12 +21,17 @@ export interface IAdglareImgCreativeData extends IAdglareAbstractCreativeData {
     target_window: string;
 }
 
+export interface IAdglareVideoCreativeData extends IAdglareAbstractCreativeData {
+    url: string;
+    mimetype: string;
+}
+
 
 export interface IAdglareAbstractCreative<TCreativeData extends IAdglareAbstractCreativeData> {
     crID: string;
     width: number;
     height: number;
-    creative_type: 'thirdparty' | 'image';
+    creative_type: 'thirdparty' | 'image' | 'video';
     creative_data: TCreativeData;
     custom_fields?: {[key: string]: string};
 }
@@ -39,4 +44,8 @@ export interface IAdglareImgCreative extends IAdglareAbstractCreative<IAdglareIm
     creative_type: 'image'
 }
 
-export type AdglareCreative = IAdglareHTMLCreative | IAdglareImgCreative;
+export interface IAdglareVideoCreative extends IAdglareAbstractCreative<IAdglareVideoCreativeData> {
+    creative_type: 'video'
+}
+
+export type AdglareCreative = IAdglareHTMLCreative | IAdglareImgCreative | IAdglareVideoCreative;

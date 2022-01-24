@@ -22,7 +22,7 @@ export class AdglareService {
 
     const queryParams = params.length > 0 ? '&' + params.join('&') : '';
 
-    return this.httpClient.get<IAdglareResponse>(`https://skyeng.engine.adglare.net/?${zoneId}${queryParams}`).pipe(
+    return this.httpClient.get<IAdglareResponse>(`https://villarriba.skyeng.ru/?${zoneId}${queryParams}`).pipe(
       tap(data => console.log(data)),
       map(data => data.response.campaigns[0])
     );

@@ -18,6 +18,8 @@ import { ImgBannerComponent } from './core/banners/img-banner/img-banner.compone
 import { PollComponent } from './pages/poll/poll.component';
 import { OlympiadComponent } from './pages/olympiad/olympiad.component';
 import { CabinetComponent } from './pages/cabinet/cabinet.component';
+import { AsdComponent } from './asd/asd.component';
+import { VideoBannerComponent } from './core/banners/video-banner/video-banner.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { CabinetComponent } from './pages/cabinet/cabinet.component';
     PollComponent,
     OlympiadComponent,
     CabinetComponent,
+    AsdComponent,
+    VideoBannerComponent,
   ],
   imports: [
     BrowserModule,
