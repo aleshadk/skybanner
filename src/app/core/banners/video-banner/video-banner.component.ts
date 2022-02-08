@@ -16,6 +16,7 @@ export class VideoBannerComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
+    (this.video.nativeElement as any).muted = true;
     (this.video.nativeElement as any).play();
     (this.video.nativeElement as any).muted = true;
   }
